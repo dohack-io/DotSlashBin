@@ -39,7 +39,7 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  justify-content: center;
+  justify-content: space-around;
   background-color: $grey;
 
   .nav-item {
@@ -48,9 +48,17 @@
 
     .nav-link.active {
       color: $green;
-      border: none;
+      border-color: transparent;
       background-color: inherit;
     }
+
+    i {
+      font-size: 20px;
+    }
   }
+}
+
+.disabled {
+  display: none;
 }
 
