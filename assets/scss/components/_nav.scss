@@ -1,14 +1,64 @@
+/*
+   Title Navigation
+ */
+
+.nav-back#back-nav {
+  justify-self: flex-start;
+  font-family: $font-family-bold;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  padding: 8px 9px;
+  font-size: 27px;
+  color: #F2F2F2;
+}
+
+.nav.title {
+  position: fixed;
+  top:0;
+  width: 100%;
+  background: $green;
+  color: $grey;
+  justify-content: center;
+  z-index: 1;
+
+
+  .nav-title {
+    font-family: $font-family-bold;
+    margin: 10px;
+  }
+}
+
+
+/*
+  Bottom Navigation
+ */
 .nav.nav-tabs {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
-  justify-content: center;
+  justify-content: space-around;
   background-color: $grey;
 
   .nav-item {
-    padding: 10px;
     background-color: inherit;
     border:0;
+
+    .nav-link.active {
+      color: $green;
+      border-color: transparent;
+      background-color: inherit;
+    }
+
+    i {
+      font-size: 20px;
+    }
   }
+}
+
+.disabled {
+  display: none;
 }
 
