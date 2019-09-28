@@ -1,0 +1,14 @@
+.nav.nav-tabs {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  justify-content: center;
+  background-color: $grey;
+
+  .nav-item {
+    padding: 10px;
+    background-color: inherit;
+    border:0;
+  }
+}
+
