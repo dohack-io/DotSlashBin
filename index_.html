@@ -60,31 +60,113 @@
     <!-- Content - Start -->
 
   <div class="tab-content" id="pills-tabContent">
-    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-      trash
-    </div>
+
 
       <!-- Post - Start -->
-      <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+      <div class="trash-content-container">
         <!-- Info Bar -->
+        <div class="trash-info-bar">
 
+        </div>
         <!-- Maps -->
-        <div id="map" style="height:100;"></div>
+        <div id="map" class="trash-map"></div>
 
         <!-- Action Bar -->
+        <div class="trash-action-section">
+          <div class="col-12 center-items">
+            <button type="button" class="btn btn-primary trash-btn-post" name="button">REPORT</button>
+          </div>
 
+          <div class="col-12">
 
+              <div class="row">
+                <div class="col-6" id="bin1">
+                  <button type="button" name="button" class="btn btn-outline-primary trash-btn-post">
+                    <div>
+                      <div class="text-center">
+                        <img src="assets/img/bin.svg" alt="">
+                        <p id="amount_1">x1</p>
+                      </div>
+                      <div class="row">
+                        <div class="w-100"></div>
+                        <div class="col center-block">Wertstoffe</div>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-6" id="bin2">
+                  <button type="button" name="button" class="btn btn-outline-primary trash-btn-post">
+                    <div>
+                      <div class="text-center">
+                        <img src="assets/img/bin.svg" alt="">
+                        <p id="amount_2">x1</p>
+                      </div>
+                      <div class="row">
+                        <div class="w-100"></div>
+                        <div class="col center-block">Altpapier</div>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6" id="bin3">
+                  <button type="button" name="button" class="btn btn-outline-primary trash-btn-post">
+                    <div>
+                      <div class="text-center">
+                        <img src="assets/img/bin.svg" alt="">
+                        <p id="amount_3">x1</p>
+                      </div>
+                      <div class="row">
+                        <div class="w-100"></div>
+                        <div class="col center-block">Restabfall</div>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-6" id="bin4">
+                  <button type="button" name="button" class="btn btn-outline-primary trash-btn-post">
+                    <div>
+                      <div class="text-center">
+                        <img src="assets/img/bin.svg" alt="">
+                        <p id="amount_4">x1</p>
+                      </div>
+                      <div class="row">
+                        <div class="w-100"></div>
+                        <div class="col center-block">Bioabfall</div>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6" id="bin5">
+                  <button type="button" name="button" class="btn btn-outline-primary trash-btn-post">
+                    <div>
+                      <div class="text-center">
+                        <img src="assets/img/bin.svg" alt="">
+                        <p id="amount_5">x1</p>
+                      </div>
+                      <div class="row">
+                        <div class="w-100"></div>
+                        <div class="col center-block">Altglass</div>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+
+              </div>
+          </div>
+
+        </div>
 
       </div>
       <!-- Post - End -->
 
-      <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-        Profile
-      </div>
     </div>
 
-
-    <ul class="nav nav-pills mb-3 fixed-bottom" id="pills-tab" role="tablist">
+<!--
+    <ul class="nav nav-pills mb-3 fixed-bottom border-top" id="pills-tab" role="tablist">
     <li class="nav-item">
       <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">
 
@@ -133,20 +215,13 @@
       </a>
       </li>
     </ul>
+-->
 
     <!-- Content - End -->
 
-
-    <script>
-      var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 51.5046, lng: 7.5263},
-          zoom: 8
-        });
-      }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbUpJoKw0Q2_R_km0z3E58s19ZP7Ziikk&callback=initMap"
+    <script src="assets/javascripts/layout_helper.js"></script>
+    <script src="assets/javascripts/map_script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhylC_EKjbl6Ryh5fwCAGu5pHZh6oSNkY&callback=initMap"
     async defer></script>
 </body>
 </html>
