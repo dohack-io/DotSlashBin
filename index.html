@@ -47,6 +47,8 @@
     <!-- manifest -->
     <link rel="manifest" href="manifest.json">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
     <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="dist/css/style.min.css">
 </head>
@@ -55,27 +57,27 @@
     <!-- Content - Start -->
 
     <div class="container container-padding">
-        <div class="row">
-            <div class="col-12">
-                <h1><i class="icon-news"></i> Welcome to the template v1.0</h1>
-                <p>This is a template for starting web projects. The basic folder structure has already been created, as well as a standardized html basic framework. Most of the advantages come from the already added css library . It uses scss, reset css, the grid system of bootstrap, spacer classes and a solid basic structure for scss projects.</p>
-                <p>So what are you waiting for? Start faster, copy and modify.</p>
-            </div>
+    <div class="tab-content">
+      <div id="home" class="tab-pane fade in active">
+        <h3>HOME</h3>
+        <p>Some content.</p>
+      </div>
+      <div id="menu1" class="tab-pane fade">
+        <h3>Menu 1</h3>
+        <p>Some content in menu 1.</p>
+      </div>
+        <div id="menu2" class="tab-pane fade">
+          <h3>Menu 2</h3>
+          <p>Some content in menu 2.</p>
         </div>
+      </div>
     </div>
 
-    <div class="container container-padding">
-        <div class="row">
-            <div class="col-md-6">
-                <h2>Headline 1</h2>
-                <p>Left</p>
-            </div>
-            <div class="col-md-6">
-                <h2>Headline 2</h2>
-                <p>Right</p>
-            </div>
-        </div>
-    </div>
+    <ul class="nav nav-tabs">
+      <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+      <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
+      <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+    </ul>
 
     <!-- Content - End -->
 
