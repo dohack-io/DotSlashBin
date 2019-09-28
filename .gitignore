@@ -1,0 +1,6 @@
+.idea
+assets/vendor/*
+dist/css/style.min.css
+dist/css/style.min.css.map
+dist/javascript/scripts.min.js
+composer.lock
