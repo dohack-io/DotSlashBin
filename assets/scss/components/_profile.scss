@@ -4,7 +4,7 @@
   width: 100%;
   .profile-avatar {
 
-    background: pink;
+    background: #2A2A2A;
     width: 100%;
     display: flex;
     align-content: center;
@@ -12,11 +12,15 @@
 
     .btn{
       background-color: #555555;
-      color:white;
-      margin: 1%;
-
-
-
+      color:greenyellow;
+      margin: 10%;
+      height: 50%;
+      margin-top: 10%
+    ;
+      //position: relative;
+      //top: 50px;
+      //right: 6%;
+      vertical-align: bottom;
     }
 
     .profile-img {
@@ -28,11 +32,14 @@
 
       img {
         height: 80%;
+        background-color: white;;
+        border-radius: 100%;
+        
       }
     }
   }
   .profile {
-
+    padding: 10px;
     color:white;
 
 
