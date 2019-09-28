@@ -19,8 +19,18 @@ html {
 body {
   font-family: $font-family-regular;
   color: $black;
-  margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body.app {
+  margin-top: 44px;
+}
+
+
+//border for the content
+.tab-content {
+  margin-left: 25px;
+  margin-right: 25px;
 }
