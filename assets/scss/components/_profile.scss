@@ -10,22 +10,15 @@
     align-content: center;
     justify-content: center;
 
-    .btn{
+    .btn {
       background-color: #555555;
-      color:greenyellow;
+      width: 30%;
+      color: greenyellow;
       margin: 10%;
-      height: 50%;
-      margin-top: 10%
-    ;
-      //position: relative;
-      //top: 50px;
-      //right: 6%;
-      vertical-align: bottom;
     }
-
     .profile-img {
-      width: 100%;
-      height: $spacer*5;
+      width: 50%;
+      //height: 150px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -36,7 +29,9 @@
         border-radius: 100%;
         
       }
+
     }
+
   }
   .profile {
     padding: 10px;
@@ -44,5 +39,23 @@
 
 
   }
+}
+.score{
+  padding: 10px;
+  h3{
+    color: greenyellow;
+
+  }
+  h1{
+    color: greenyellow;
+
+  }
+  h2{
+     color: greenyellow;
+   }
+  h4{
+    color: greenyellow;
+  }
+
 }
 
