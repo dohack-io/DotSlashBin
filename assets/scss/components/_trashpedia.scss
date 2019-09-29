@@ -1,4 +1,16 @@
 .trashpedia {
+  #pedia-results-list {
+    li {
+      padding: 10px 0;
+    }
+    i {
+      padding-right: 10px;
+      position: relative;
+      top: 7px;
+      font-size: 30px;
+    }
+  }
+
   a {
     color: black;
   }
@@ -18,35 +30,35 @@
   }
 
   .container .row {
-    .icon-bin {
-      &.other {
-        color: dimgray;
-      }
+    padding-bottom: 25px;
+  }
 
-      &.compostable {
-        color: saddlebrown;
-      }
-
-      &.recycable {
-        color: gold;
-      }
-
-      &.paper {
-        color: royalblue;
-      }
-
-      &.big {
-        text-align: center;
-        font-size: 72px;
-        padding-top: 20px
-      }
-
-      &.small {
-
-      }
+  .icon-bin {
+    &.other {
+      color: dimgray;
     }
 
-    padding-bottom: 25px
+    &.compostable {
+      color: saddlebrown;
+    }
+
+    &.recycable {
+      color: gold;
+    }
+
+    &.paper {
+      color: royalblue;
+    }
+
+    &.big {
+      text-align: center;
+      font-size: 72px;
+      padding-top: 20px
+    }
+
+    &.small {
+
+    }
   }
 
   .search-results {
