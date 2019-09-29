@@ -1,20 +1,25 @@
-# Template Repository
-This is a template, please fill it with your teams data. Places to fill in data are marked with a //TODO. If you fail to do so, our jury can't evaluate your project. 
+
+# TrashHero
+![TrashHeroLogo](https://github.com/dohack-io/DotSlashBin/blob/master/assets/img/app.png?raw=true)
+Your helping hand for problems with garbage.
 
 ## Description 
-//TODO: describe your project
+TrashHero is a Web-App where you can report full trash bins in your near and get information what kind of waste belongs to which trash bin. 
 
 ## Built with
-//TODO: lists the technologies you use and their purpose
+We built it with the power of jQuery, Bootstrap, Google Maps and Directus.
 
 ## What benefit will your work bring in smart city context?
-//TODO: list benefits and tell us your motivation in working on this topic
+TrashHero ensures that the garbage is better separated and that the planning of garbage collection intervals is optimized by real-time information. This saves exhaust fumes and reduces idling.
 
 ## What were challenges you encountered and Lessons Learned?
 //TODO: describe challenges you encountered and how you solved them. also name your lessons learned
 
 ## About your team
-//TODO: describe each team member with their background knowledge
+Serhiy Danilevych
+Elisabeth Kornilow @[korniDE](https://github.com/kornide)
+[Justus Palz](https://www.intercon-energy.club) @[Schanks1711](https://github.com/Schanks1711)
+[Marco Sadowski](https://camefrom.space) @[MarcoPNS](https://github.com/MarcoPNS)
 
 ## What's next for your project?
 //TODO: is there anything you've planned to work on after this hackathon? you've got some ideas of features to add? 
