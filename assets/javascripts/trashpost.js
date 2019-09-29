@@ -146,13 +146,11 @@ function addToSet(id){
 
 function reportClick() {
   console.log("Report Click");
-  if (trashId != 0){
     var tmpBtn = $("#reportBtn");
     tmpBtn.removeClass("btn-primary");
     tmpBtn.addClass("btn-success");
     tmpBtn.text("Thank you for Report 👍");
-    updateTrashData()
-  }
+    overlayOn();
 
 }
 
