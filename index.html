@@ -56,6 +56,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/@directus/sdk-js@5.3.4/dist/directus-sdk.umd.min.js"></script>
     <script src="assets/javascripts/scripts.js"></script>
+    <script src="assets/javascripts/profile.js"></script>
 </head>
 <body class="app">
 
@@ -221,11 +222,20 @@
                     <h1>
                         Trash Kid
                     </h1>
-                    <h2>
-                        42/100
-                        Trash-Karma
-                    </h2>
+                    <div>
+                        <h2>
+                            <div id="myScore"></div>
+                            <script src="assets/javascripts/profile.js"></script>
+                            /100 Trash-Karma
+                        </h2>
+                    </div>
 
+
+                    <div id="myProgress">
+                        <div id="myBar"></div>
+                    </div>
+                    <br>
+                    <script src="assets/javascripts/profile.js"></script>
                     <h4>
                         Till: Trashman!
                     </h4>
@@ -266,7 +276,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">
+            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false" onclick="move(); count();" >
                 <div>
                     <div class="text-center">
                         <i class="icon-person"></i>
