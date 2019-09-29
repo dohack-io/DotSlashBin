@@ -1,4 +1,4 @@
-$_container_heigth: 700px;
+$_container_heigth: 900px;
 
 $infobar_height: 00%;
 $map_height: 70%;
@@ -23,6 +23,7 @@ $actionbar_height: 30%;
 
 .trash-map {
   height: $map_height;
+  margin: 0 -25px;
 }
 
 
@@ -31,10 +32,16 @@ $actionbar_height: 30%;
   width: auto;
   //background-color: gray;
 
+
   .trash-btn-post {
     margin: 1em 0;
     width: 100%;
     font-size: 21px;
-
   }
+
+  .conHeight {
+    height: 160px;
+  }
+
+
 }

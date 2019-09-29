@@ -2,26 +2,72 @@
 var trashId = 0;
 // Map Marker : binId
 var markerMap = new Map();
+var trashes;
 
+var url_bin_empty = {url: "https://www.iconfinder.com/icons/35606/download/png/48"};
+var url_bin_full = {url: "https://www.iconfinder.com/icons/35607/download/png/48"};
 
+var binName  = ["Recyclable Waste Bin", "Paper Waste", "Bio Waste", "Non Recyclable Waste", "Glass Waste Bin"];
+
+var clickSet = new Set();
 
 // Location
 
 function addTrashLocation (pos, binId) {
   // The marker, positioned at Uluru
   var marker = new google.maps.Marker({position: pos, map: map});
+  if (binIsEmpty(binId)){
+    marker.setIcon(url_bin_empty);
+  } else {
+    marker.setIcon(url_bin_full);
+  }
   markerMap.set(marker, binId);
+  marker.addListener('click', function(){
+    resetTrashesInControl()
+
+    var binID = markerMap.get(marker);
+    console.log(binID);
+    var tmpCans = trashes[binID - 1].cans;
+
+    for (var i = 0; i < tmpCans.length; i++) {
+      var can = tmpCans[i];
+      console.log(can);
+      addTrashToControl(can.amount, binName[i]);
+    }
+
+    event.preventDefault();
+    // Getting the height of the document
+    var n = $(document).height();
+    $('html, body').animate({ scrollTop: n }, 700);
+  });
 }
 
 
 // Controll function
-function resetTrashes () {
+function resetTrashesInControl () {
   trashId = 0;
-  $("#trash-btn-collection").empty()
+  $("#trash-btn-collection").empty();
+  var tmpBtn = $("#reportBtn");
+  tmpBtn.removeClass("btn-success");
+  tmpBtn.addClass("btn-primary");
+  tmpBtn.text("REPORT");
+
+  clickSet.clear();
 }
 
 
-function addTrashes (trashes) {
+function updateTrashes() {
+  api.getItems("trashcans")
+      .then(data => {
+        trashes = data.data
+        trashes.forEach(function(tmp) {
+          var bId = tmp.id;
+          var bPos = {lat: tmp.position.lat, lng: tmp.position.lon};
+          addTrashLocation(bPos, bId);
+          console.log("Pos:" +  bPos + " id: " + bId);
+        });
+      }).catch(error => console.error(error));
+  var marker = new google.maps.Marker({position: {lat: 51.5046, lng: 7.5263}, map: map});
 }
 
 
@@ -31,10 +77,10 @@ function addRow(row){
     tmpSection.append(
     '<div class="row">'+
       '<div class="col-6 invisible" id="bin' + (row*2) +'">'+
-        '<button type="button" name="button" class="btn btn-outline-primary trash-btn-post">' +
+        '<button type="button" name="button" class="btn btn-outline-success trash-btn-post conHeight" onclick="addToSet('+ (row*2) +')">' +
           '<div>' +
             '<div class="text-center">'+
-              '<img src="assets/img/bin.svg" alt="">'+
+              '<img src="assets/img/icons/bin.svg" alt="">'+
               '<p id="amount_' + (row*2) +'">x</p>'+
             '</div>'+
             '<div class="row">'+
@@ -45,10 +91,10 @@ function addRow(row){
         '</button>'+
       '</div>'+
       '<div class="col-6 invisible" id="bin' + ((row*2) + 1) +'">'+
-        '<button type="button" name="button" class="btn btn-outline-primary trash-btn-post">'+
+        '<button type="button" name="button" class="btn btn-outline-success trash-btn-post conHeight" onclick="addToSet('+ ((row*2) + 1) +')">'+
           '<div>'+
             '<div class="text-center">'+
-              '<img src="assets/img/bin.svg" alt="">'+
+              '<img src="assets/img/icons/bin.svg" alt="">'+
               '<p id="amount_' + ((row*2) + 1) +'">x</p>'+
             '</div>'+
             '<div class="row">'+
@@ -61,7 +107,7 @@ function addRow(row){
     '</div>');
 }
 
-function addTrash(trashAmount, trashName) {
+function addTrashToControl(trashAmount, trashName) {
   if ((trashId%2) == 0) {
     addRow(trashId / 2);
   }
@@ -70,23 +116,42 @@ function addTrash(trashAmount, trashName) {
   $("#binLabel"+ trashId++).append(trashName);
 }
 
+function binIsEmpty(binId) {
+  var tmp = trashes[binId - 1];
+  var tmpCans = tmp.cans;
+  for (var value of tmpCans) {
+    //console.log("Full: " + value);
+    if (value.full){return false}
+  }
+  return true;
+}
+
+function addToSet(id){
+  console.log("Buttonid: " + id);
+  clickSet.add(id);
+}
+
+function reportClick() {
+  console.log("Report Click");
+  var tmpBtn = $("#reportBtn");
+  tmpBtn.removeClass("btn-primary");
+  tmpBtn.addClass("btn-success");
+  tmpBtn.text("Thank you for Report 👍");
+
+}
+
 
 
 
 // Test
 $(document).ready (function () {
-  addTrash(1, "Wertstoffe");
-  addTrash(2, "Altpapier");
-  addTrash(3, "Restabfall");
-  addTrash(4, "Bioabfall");
-  addTrash(5, "Altglass");
+  // addTrashToControl(1, "Wertstoffe");
+  // addTrashToControl(2, "Altpapier");
+  // addTrashToControl(3, "Restabfall");
+  // addTrashToControl(4, "Bioabfall");
+  // addTrashToControl(5, "Altglass");
 
-  addTrashLocation({lat: 51.5046, lng: 7.5262}, 0);
-  addTrashLocation({lat: 51.5046, lng: 7.5265}, 1);
-  addTrashLocation({lat: 51.5046, lng: 7.5269}, 2);
-
-  for (var [key, value] of markerMap) {
-    console.log(key + ' = ' + value);
-  }
+  resetTrashesInControl();
+  updateTrashes();
 
 });

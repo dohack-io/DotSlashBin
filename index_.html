@@ -74,11 +74,11 @@
         <!-- Action Bar -->
         <div class="trash-action-section">
           <div class="col-12 center-items">
-            <button type="button" class="btn btn-primary trash-btn-post" name="button">REPORT</button>
+            <button type="button" onclick="reportClick()" id="reportBtn" class="btn btn-primary trash-btn-post" name="button">REPORT</button>
           </div>
 
           <div class="col-12" id="trash-btn-collection">
-              
+
           </div>
 
         </div>
@@ -88,60 +88,9 @@
 
     </div>
 
-<!--
-    <ul class="nav nav-pills mb-3 fixed-bottom border-top" id="pills-tab" role="tablist">
-    <li class="nav-item">
-      <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">
-
-
-        <div>
-          <div class="text-center">
-            <img src="assets/img/book.svg" alt="">
-          </div>
-          <div class="row">
-            <div class="w-100"></div>
-            <div class="col center-block">Trashpedia</div>
-          </div>
-        </div>
-
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">
-
-          <div>
-            <div class="text-center">
-              <img src="assets/img/bin.svg" alt="">
-            </div>
-            <div class="row">
-              <div class="w-100"></div>
-              <div class="col center-block">Trashpost</div>
-            </div>
-          </div>
-
-        </a>
-      </li>
-
-      <li class="nav-item">
-      <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">
-
-        <div>
-          <div class="text-center">
-            <img src="assets/img/person.svg" alt="">
-          </div>
-          <div class="row">
-            <div class="w-100"></div>
-            <div class="col center-block">Profile</div>
-          </div>
-        </div>
-
-      </a>
-      </li>
-    </ul>
--->
-
     <!-- Content - End -->
-
+    <script src="https://unpkg.com/@directus/sdk-js@5.3.4/dist/directus-sdk.umd.min.js"></script>
+    <script src="assets/javascripts/scripts.js"></script>
     <script src="assets/javascripts/layout_helper.js"></script>
     <script src="assets/javascripts/map_script.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhylC_EKjbl6Ryh5fwCAGu5pHZh6oSNkY&callback=initMap"

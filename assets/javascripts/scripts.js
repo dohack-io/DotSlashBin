@@ -12,10 +12,11 @@ const api = new DirectusSDK({
     url: "https://trashhero.camefrom.space/api/public/"
 });
 
-api.getItems("trashitems")
+
+api.getItems("trashcans")
     .then(data => {
         console.log("YAY");
-        console.log(data);
+        console.log(data.data);
         // Do something with the data
     })
     .catch(error => console.error(error));
