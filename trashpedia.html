@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Settings -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,IE=10,IE=11,chrome=1">
+    <meta name="theme-color" content="#0B3668"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1.0, minimum-scale=1.0, maximum-scale=1.0">
+
+    <!-- SEO -->
+    <title>Template Title</title>
+    <meta name="description" content="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua." />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://url-to-site.com/current-subpage" />
+
+    <meta property="og:site_name" content="Site name">
+    <meta property="og:title" content="Template Title" />
+    <meta property="og:locale" content="en" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua." />
+    <meta property="og:image" content="https://url-to-site.com/image.jpg" />
+    <meta property="og:url" content="https://url-to-site.com/current-subpage" />
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Template Title">
+
+    <!-- Languages -->
+    <link rel="alternate" hreflang="en" href="https://url-to-site.com/current-subpage">
+    <link rel="alternate" hreflang="de" href="https://url-to-site.de/current-subpage">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="dist/favicons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="dist/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="dist/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="dist/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="dist/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="dist/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="dist/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="dist/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="dist/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="dist/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="dist/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="dist/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="dist/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="dist/favicons/favicon-16x16.png">
+
+    <!-- manifest -->
+    <link rel="manifest" href="manifest.json">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="dist/css/style.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/@directus/sdk-js@5.3.4/dist/directus-sdk.umd.min.js"></script>
+    <script src="assets/javascripts/scripts.js"></script>
+
+</head>
+<body>
+
+    <!-- Content - Start -->
+
+    <div class="trashpedia">
+        <div class="container container-padding">
+            <div class="input-group mb-3">
+                <input id="search-field" type="text" class="form-control" placeholder="Product Name" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button">
+                        <img src="assets/img/icons/camera.svg">
+                    </button>
+                </div>
+            </div>
+
+
+
+            <div class="container pedia-content">
+                <div class="row">
+                    <div class="col-6">
+                        <a data-toggle="collapse" href="#collapse-other" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <div class="card">
+                                <i class="icon-bin other big"></i>
+                                <div class="card-body">
+                                    <h6 class="card-text">Other<br>Waste</h6>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="collapse" id="collapse-other">
+                            <div class="card card-body">
+                                <div class="search-results">
+                                    <div class="search-results-other"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <a data-toggle="collapse" href="#collapse-compostable" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <div class="card">
+                                <i class="icon-bin compostable big"></i>
+                                <div class="card-body">
+                                    <h6 class="card-text">Compostable<br>Waste</h6>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="collapse" id="collapse-compostable">
+                            <div class="card card-body">
+                                <div class="search-results">
+                                    <div class="search-results-compostable"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <a data-toggle="collapse" href="#collapse-recycable" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <div class="card">
+                                <i class="icon-bin recycable big"></i>
+                                <div class="card-body">
+                                    <h6 class="card-text">Recycable<br>Waste</h6>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="collapse" id="collapse-recycable">
+                            <div class="card card-body">
+                                <div class="search-results">
+                                    <div class="search-results-recycable"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <a data-toggle="collapse" href="#collapse-paper" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <div class="card">
+                                <i class="icon-bin paper big"></i>
+                                <div class="card-body">
+                                    <h6 class="card-text">Paper<br>Waste</h6>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="collapse" id="collapse-paper">
+                            <div class="card card-body">
+                                <div class="search-results">
+                                    <div class="search-results-paper"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Content - End -->
+</body>
+</html>

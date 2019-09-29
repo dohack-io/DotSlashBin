@@ -1,4 +1,13 @@
 .trashpedia {
+  a {
+    color: black;
+  }
+
+  a:hover {
+    color: black;
+    text-decoration: none;
+  }
+
   h6 {
     text-align: center
   }
@@ -9,29 +18,39 @@
   }
 
   .container .row {
-    .col-6 .card .icon-bin {
-      text-align: center;
-      font-size: 72px;
-      padding-top: 20px
+    .icon-bin {
+      &.other {
+        color: dimgray;
+      }
+
+      &.compostable {
+        color: saddlebrown;
+      }
+
+      &.recycable {
+        color: gold;
+      }
+
+      &.paper {
+        color: royalblue;
+      }
+
+      &.big {
+        text-align: center;
+        font-size: 72px;
+        padding-top: 20px
+      }
+
+      &.small {
+
+      }
     }
 
     padding-bottom: 25px
   }
 
-  #dimgray {
-    color: dimgray;
-  }
-
-  #saddlebrown {
-    color: saddlebrown;
-  }
-
-  #gold {
-    color: gold;
-  }
-
-  #royalblue {
-    color: royalblue;
+  .search-results {
+    font-size: 10px;
   }
 }
 
