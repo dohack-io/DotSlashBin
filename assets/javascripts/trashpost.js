@@ -3,6 +3,8 @@ var trashId = 0;
 // Map Marker : binId
 var markerMap = new Map();
 var trashes;
+var currentTrashes;
+var homeLocation;
 
 var url_bin_empty = {url: "https://trashhero.camefrom.space/marker-empty.png"};
 var url_bin_full = {url: "https://trashhero.camefrom.space/marker-full.png"};
@@ -28,6 +30,8 @@ function addTrashLocation (pos, binId) {
     var binID = markerMap.get(marker);
     console.log(binID);
     var tmpCans = trashes[binID - 1].cans;
+    currentTrashes = tmpCans;
+
 
     for (var i = 0; i < tmpCans.length; i++) {
       var can = tmpCans[i];
@@ -60,14 +64,19 @@ function updateTrashes() {
   api.getItems("trashcans")
       .then(data => {
         trashes = data.data
-        trashes.forEach(function(tmp) {
-          var bId = tmp.id;
-          var bPos = {lat: tmp.position.lat, lng: tmp.position.lon};
-          addTrashLocation(bPos, bId);
-          console.log("Pos:" +  bPos + " id: " + bId);
-        });
+        updateTrashOnTheMap();
       }).catch(error => console.error(error));
-  var marker = new google.maps.Marker({position: {lat: 51.5046, lng: 7.5263}, map: map});
+}
+
+function updateTrashOnTheMap(){
+  clearOverlays();
+  trashes.forEach(function(tmp) {
+    var bId = tmp.id;
+    var bPos = {lat: tmp.position.lat, lng: tmp.position.lon};
+    addTrashLocation(bPos, bId);
+    //console.log("Pos:" +  bPos + " id: " + bId);
+  });
+  homeLocation = new google.maps.Marker({position: {lat: 51.5046, lng: 7.5263}, map: map});
 }
 
 
@@ -77,7 +86,7 @@ function addRow(row){
     tmpSection.append(
     '<div class="row">'+
       '<div class="col-6 invisible" id="bin' + (row*2) +'">'+
-        '<button type="button" name="button" class="btn btn-outline-success trash-btn-post conHeight" onclick="addToSet('+ (row*2) +')">' +
+        '<button type="button" name="button" class="btn btn-outline-success trash-btn-post conHeight" onclick="addToSet('+ (row*2) +')" id="btnMain' + (row*2) +'">' +
           '<div>' +
             '<div class="text-center">'+
               '<img src="assets/img/icons/bin.svg" alt="">'+
@@ -91,7 +100,7 @@ function addRow(row){
         '</button>'+
       '</div>'+
       '<div class="col-6 invisible" id="bin' + ((row*2) + 1) +'">'+
-        '<button type="button" name="button" class="btn btn-outline-success trash-btn-post conHeight" onclick="addToSet('+ ((row*2) + 1) +')">'+
+        '<button type="button" name="button" class="btn btn-outline-success trash-btn-post conHeight" onclick="addToSet('+ ((row*2) + 1) +')" id="btnMain' + ((row*2) + 1) +'">'+
           '<div>'+
             '<div class="text-center">'+
               '<img src="assets/img/icons/bin.svg" alt="">'+
@@ -113,6 +122,10 @@ function addTrashToControl(trashAmount, trashName) {
   }
   $("#bin"+ trashId).removeClass("invisible");
   $("#amount_"+ trashId).append(trashAmount);
+  if (trashAmount == 0){
+    $("#btnMain"+ trashId).removeClass("btn-outline-success");
+    $("#btnMain"+ trashId).addClass("btn-outline-danger");
+  }
   $("#binLabel"+ trashId++).append(trashName);
 }
 
@@ -133,11 +146,42 @@ function addToSet(id){
 
 function reportClick() {
   console.log("Report Click");
-  var tmpBtn = $("#reportBtn");
-  tmpBtn.removeClass("btn-primary");
-  tmpBtn.addClass("btn-success");
-  tmpBtn.text("Thank you for Report 👍");
+  if (trashId != 0){
+    var tmpBtn = $("#reportBtn");
+    tmpBtn.removeClass("btn-primary");
+    tmpBtn.addClass("btn-success");
+    tmpBtn.text("Thank you for Report 👍");
+    updateTrashData()
+  }
 
+}
+
+
+function updateTrashData(){
+  console.log(currentTrashes);
+  for (var i in clickSet) {
+    currentTrashes[i].full = true;
+  }
+  updateTrashOnTheMap();
+
+  resetTrashesInControl()
+  var tmpCans = currentTrashes;
+
+
+  for (var i = 0; i < tmpCans.length; i++) {
+    var can = tmpCans[i];
+    console.log(can);
+    addTrashToControl(can.amount, binName[i]);
+  }
+
+}
+
+
+function clearOverlays() {
+  for (marker in markerMap) {
+    marker.setMap(null);
+  }
+  //homeLocation.setMap(null);
 }
 
 
