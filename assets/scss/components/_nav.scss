@@ -46,6 +46,7 @@
   .nav-item {
     background-color: inherit;
     border:0;
+    width: 120px;
 
     .nav-link.active {
       color: $green;
@@ -57,6 +58,9 @@
       font-size: 20px;
     }
   }
+}
+.col.center-block {
+  text-align: center;
 }
 
 .disabled {

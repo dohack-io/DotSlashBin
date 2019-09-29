@@ -74,6 +74,13 @@ h4, .h4 {
   }
 }
 
+@media (max-width: 425px) {
+
+  h6.card-text ,.card-text.h6 {
+    font-size: 0.8rem;
+  }
+}
+
 
 // Copytext
 p, .p {
