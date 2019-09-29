@@ -5,10 +5,13 @@ $(window).ready (function () {
 });
 
 function overlayOn() {
-  document.getElementById("overlay").style.display = "block";
+  $('#overlay').fadeIn();
+
   setInterval(function() { overlayOff(); }, 1500);
+
 }
 
 function overlayOff() {
-  document.getElementById("overlay").style.display = "none";
+  $('#overlay').fadeOut();
+
 }
