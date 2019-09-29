@@ -1,19 +1,19 @@
 .con-profile {
-  background-color: #555555;
-  height: 100%;
+  height: calc(100% - 120px);
   width: 100%;
   .profile-avatar {
 
-    background: #2A2A2A;
+    margin-top: 10px;
+    margin-bottom: 10px;
     width: 100%;
     display: flex;
     align-content: center;
     justify-content: center;
 
     .btn {
-      background-color: #555555;
+      background-color: $green;
       width: 30%;
-      color: greenyellow;
+      color: $white;
       margin: 10%;
     }
     .profile-img {
@@ -22,10 +22,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
-
+      background-color: rgba(58, 192, 209, 0.8);
+      border-radius: 100%;
       img {
-        height: 80%;
-        background-color: white;;
+        height: 110px;
         border-radius: 100%;
         
       }
@@ -33,29 +33,5 @@
     }
 
   }
-  .profile {
-    padding: 10px;
-    color:white;
-
-
-  }
-}
-.score{
-  padding: 10px;
-  h3{
-    color: greenyellow;
-
-  }
-  h1{
-    color: greenyellow;
-
-  }
-  h2{
-     color: greenyellow;
-   }
-  h4{
-    color: greenyellow;
-  }
-
 }
 
