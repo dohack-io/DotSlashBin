@@ -17,9 +17,13 @@ Some team members have programmed a web app for the first time or worked for the
 
 ## About your team
 Serhiy Danilevych
+
 Elisabeth Kornilow @[korniDE](https://github.com/kornide)
+
 [Justus Palz](https://www.intercon-energy.club) @[Schanks1711](https://github.com/Schanks1711)
+
 [Marco Sadowski](https://camefrom.space) @[MarcoPNS](https://github.com/MarcoPNS)
+
 
 ## How does it look?
 
