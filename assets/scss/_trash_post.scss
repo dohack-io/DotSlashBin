@@ -1,0 +1,47 @@
+$_container_heigth: 900px;
+
+$infobar_height: 00%;
+$map_height: 70%;
+$actionbar_height: 30%;
+
+
+
+.trash-content-container {
+  height: $_container_heigth;
+
+  .center-items {
+    text-align: center;
+  }
+
+}
+
+
+.trash-info-bar {
+  height: $infobar_height;
+  background-color: green;
+}
+
+.trash-map {
+  height: $map_height;
+  margin: 0 -25px;
+}
+
+
+.trash-action-section {
+  height: $actionbar_height;
+  width: auto;
+  //background-color: gray;
+
+
+  .trash-btn-post {
+    margin: 1em 0;
+    width: 100%;
+    font-size: 21px;
+  }
+
+  .conHeight {
+    height: 160px;
+  }
+
+
+}

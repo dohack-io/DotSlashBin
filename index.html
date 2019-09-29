@@ -54,35 +54,140 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-
+    <script src="https://unpkg.com/@directus/sdk-js@5.3.4/dist/directus-sdk.umd.min.js"></script>
+    <script src="assets/javascripts/scripts.js"></script>
 </head>
-<body>
+<body class="app">
+
+    <!-- Header Title - Start -->
+    <a class="nav-back icon-left disabled" id="back-nav"></a>
+    <ul class="nav title border-bottom">
+        <li class="nav-item">
+            <p class="nav-title" id="title-nav">Trash Hero</p>
+        </li>
+    </ul>
+    <!-- Header Title - End -->
 
     <!-- Content - Start -->
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-    <div class="container container-padding">
-    <div class="tab-content">
-      <div id="home" class="tab-pane fade in active">
-        <h3>HOME</h3>
-        <p>Some content.</p>
-      </div>
-      <div id="menu1" class="tab-pane fade">
-        <h3>Menu 1</h3>
-        <p>Some content in menu 1.</p>
-      </div>
-        <div id="menu2" class="tab-pane fade">
-          <h3>Menu 2</h3>
-          <p>Some content in menu 2.</p>
+            Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,</div>
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <!-- Post - Start -->
+            <div class="trash-content-container">
+                <!-- Info Bar -->
+                <div class="trash-info-bar">
+
+                </div>
+                <!-- Maps -->
+                <div id="map" class="trash-map"></div>
+
+                <!-- Action Bar -->
+                <div class="trash-action-section">
+                    <div class="col-12 center-items">
+                        <button type="button" onclick="reportClick()" id="reportBtn" class="btn btn-primary trash-btn-post" name="button">REPORT</button>
+                    </div>
+
+                    <div class="col-12" id="trash-btn-collection">
+
+                    </div>
+                </div>
+            </div>
+            <!-- Post - End -->
         </div>
-      </div>
+        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+            <!-- Content - Start -->
+            <div class="container con-profile">
+                <div class="row">
+                    <div class="profile-avatar">
+                        <div class="profile-img">
+                            <img src="assets/img/Avatar_Head.svg">
+                        </div>
+                        <button id="changeAvatar" onclick="function changeAvatarFunction() {
+
+                }
+                changeAvatarFunction()" type="button"class="btn">Change <br>  Avatar</button>
+                    </div>
+                </div>
+                <div class="profile">
+                    <p>Username:
+                        <br>
+                        trashcan2019</p>
+                    <p>Email Address:
+                        <br>
+                        trashcan2019@trashcan.com</p>
+                </div>
+                <div class="score">
+                    <h3>
+                        You're a:
+                    </h3>
+                    <h1>
+                        Trash Kid
+                    </h1>
+                    <h2>
+                        42/100
+                        Trash-Karma
+                    </h2>
+
+                    <h4>
+                        Till: Trashman!
+                    </h4>
+                </div>
+            </div>
+
+            <!-- Content - End -->
+        </div>
     </div>
-
-    <ul class="nav nav-tabs">
-      <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
-      <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
-      <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
-    </ul>
-
     <!-- Content - End -->
+
+    <!-- Tab Navigation - Start -->
+    <ul class="nav nav-tabs border-top" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
+                <div>
+                    <div class="text-center">
+                        <i class="icon-book"></i>
+                    </div>
+                    <div class="row">
+                        <div class="w-100"></div>
+                        <div class="col center-block">Trashpedia</div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
+                <div>
+                    <div class="text-center">
+                        <i class="icon-bin"></i>
+                    </div>
+                    <div class="row">
+                        <div class="w-100"></div>
+                        <div class="col center-block">Trashpost</div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">
+                <div>
+                    <div class="text-center">
+                        <i class="icon-person"></i>
+                    </div>
+                    <div class="row">
+                        <div class="w-100"></div>
+                        <div class="col center-block">Profile</div>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <!-- Tab Navigation - End -->
+    <script src="assets/javascripts/layout_helper.js"></script>
+    <script src="assets/javascripts/map_script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhylC_EKjbl6Ryh5fwCAGu5pHZh6oSNkY&callback=initMap"
+            async defer></script>
+    <script src="assets/javascripts/trashpost.js"></script>
 </body>
 </html>

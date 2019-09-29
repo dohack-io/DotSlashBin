@@ -1,47 +1,36 @@
 .con-profile {
-  background-color: #555555;
-  height: 100%;
+  height: calc(100% - 120px);
   width: 100%;
   .profile-avatar {
 
-    background: #2A2A2A;
+    margin-top: 10px;
+    margin-bottom: 10px;
     width: 100%;
     display: flex;
     align-content: center;
     justify-content: center;
 
-    .btn{
-      background-color: #555555;
-      color:greenyellow;
+    .btn {
+      background-color: $green;
+      width: 30%;
+      color: $white;
       margin: 10%;
-      height: 50%;
-      margin-top: 10%
-    ;
-      //position: relative;
-      //top: 50px;
-      //right: 6%;
-      vertical-align: bottom;
     }
-
     .profile-img {
-      width: 100%;
-      height: $spacer*5;
+      width: 50%;
+      //height: 150px;
       display: flex;
       justify-content: center;
       align-items: center;
-
+      background-color: rgba(58, 192, 209, 0.8);
+      border-radius: 100%;
       img {
-        height: 80%;
-        background-color: white;;
+        height: 110px;
         border-radius: 100%;
         
       }
-    }
-  }
-  .profile {
-    padding: 10px;
-    color:white;
 
+    }
 
   }
 }

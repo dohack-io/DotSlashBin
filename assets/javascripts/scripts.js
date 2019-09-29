@@ -10,12 +10,13 @@ const api = new DirectusSDK({
     url: "https://trashhero.camefrom.space/api/public/"
 });
 let response;
-api.getItems("trashitems")
+
+api.getItems("trashcans")
     .then(data => {
 
         response = data;
         console.log("YAY");
-        console.log(data);
+        console.log(data.data);
         // Do something with the data
 
         filterType(data, "other").forEach(function(e) {
@@ -67,5 +68,4 @@ $( document ).ready(function() {
     });
 
 });
-
 

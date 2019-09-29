@@ -57,44 +57,46 @@
 
 </head>
 <body>
+
     <!-- Content - Start -->
+    <div class="container con-profile">
+        <div class="row">
+            <div class="profile-avatar">
+                <div class="profile-img">
+                    <img src="assets/img/icons/person.svg">
+                </div>
+                <button id="changeAvatar" onclick="function changeAvatarFunction() {
 
-  <div class="tab-content" id="pills-tabContent">
-
-
-      <!-- Post - Start -->
-      <div class="trash-content-container">
-        <!-- Info Bar -->
-        <div class="trash-info-bar">
-
+                }
+                changeAvatarFunction()" type="button"class="btn">Change <br>  Avatar</button>
+            </div>
         </div>
-        <!-- Maps -->
-        <div id="map" class="trash-map"></div>
+       <div class="profile">
+           <p>Username:
+               <br>
+           trashcan2019</p>
+           <p>Email Address:
+               <br>
+           trashcan2019@trashcan.com</p>
+       </div>
+       <div class="score">
+           <h3>
+               You're a:
+           </h3>
+           <h1>
+               Trash Kid
+           </h1>
+           <h2>
+               42/100
+               Hero-Points
+           </h2>
 
-        <!-- Action Bar -->
-        <div class="trash-action-section">
-          <div class="col-12 center-items">
-            <button type="button" onclick="reportClick()" id="reportBtn" class="btn btn-primary trash-btn-post" name="button">REPORT</button>
-          </div>
-
-          <div class="col-12" id="trash-btn-collection">
-
-          </div>
-
-        </div>
-
-      </div>
-      <!-- Post - End -->
-
+           <h4>
+               Till: Trashman!
+           </h4>
+       </div>
     </div>
 
     <!-- Content - End -->
-    <script src="https://unpkg.com/@directus/sdk-js@5.3.4/dist/directus-sdk.umd.min.js"></script>
-    <script src="assets/javascripts/scripts.js"></script>
-    <script src="assets/javascripts/layout_helper.js"></script>
-    <script src="assets/javascripts/map_script.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhylC_EKjbl6Ryh5fwCAGu5pHZh6oSNkY&callback=initMap"
-    async defer></script>
-    <script src="assets/javascripts/trashpost.js"></script>
 </body>
-</html>
+</html>,0
