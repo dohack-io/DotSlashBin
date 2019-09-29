@@ -4,8 +4,8 @@ var trashId = 0;
 var markerMap = new Map();
 var trashes;
 
-var url_bin_empty = {url: "https://www.iconfinder.com/icons/35606/download/png/48"};
-var url_bin_full = {url: "https://www.iconfinder.com/icons/35607/download/png/48"};
+var url_bin_empty = {url: "https://trashhero.camefrom.space/marker-empty.png"};
+var url_bin_full = {url: "https://trashhero.camefrom.space/marker-full.png"};
 
 var binName  = ["Recyclable Waste Bin", "Paper Waste", "Bio Waste", "Non Recyclable Waste", "Glass Waste Bin"];
 
