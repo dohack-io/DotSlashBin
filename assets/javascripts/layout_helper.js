@@ -6,7 +6,7 @@ $(window).ready (function () {
 
 function overlayOn() {
   document.getElementById("overlay").style.display = "block";
-  setInterval(function() { overlayOff(); }, 2000);
+  setInterval(function() { overlayOff(); }, 1500);
 }
 
 function overlayOff() {
