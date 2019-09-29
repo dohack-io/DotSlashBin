@@ -22,7 +22,8 @@ Elisabeth Kornilow @[korniDE](https://github.com/kornide)
 [Marco Sadowski](https://camefrom.space) @[MarcoPNS](https://github.com/MarcoPNS)
 
 ## How does it look?
-//TODO: got any screenshots? post them here!
+
+### CHECK IT OUT:  [trashhero.camefrom.space](https://trashhero.camefrom.space)
 
 ## Anything to add?
 Of course you can extend the concept a lot. Mainly in terms of content where which bin is located or where which garbage should be disposed of. 
