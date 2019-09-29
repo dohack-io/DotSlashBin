@@ -1,4 +1,10 @@
 .trashpedia {
+  display: contents;
+  .container {
+    width: 100%;
+    max-width: 600px !important;
+  }
+
   #pedia-results-list {
     li {
       padding: 10px 0;
